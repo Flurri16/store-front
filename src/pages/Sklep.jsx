@@ -3,7 +3,7 @@ import Przedmiot from './Przedmiot'
 import Cart from './Cart'
 export default function Sklep() {
   return (
-        <div className='flex-container'>
+        <div className='grid-container'>
             <Przedmiot></Przedmiot>
             <Przedmiot></Przedmiot>
             <Przedmiot></Przedmiot>

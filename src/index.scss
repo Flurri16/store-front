@@ -65,14 +65,21 @@ body {
       opacity: 50%;
     }
     .nav-logout {
-      background-color: $red-bright;
+      background-color: $yellow;
+      &:hover {
+        background-color: $red-bright;
+      }
     }
     .nav-login {
-      background-color: $lime;
+      background-color: $yellow;
+      &:hover {
+        background-color: $lime;
+      }
     }
   }
-  .flex-container {
-    display: flex;
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     // justify-content: space-between;
     gap: 30px;
     margin-bottom: 30px;
@@ -89,15 +96,20 @@ body {
     }
     img {
       max-width: 150px;
-      margin: 20px auto;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 16px;
+      margin: 20px 0;
     }
     .button-cost {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      font-size: 16px;
       span {
         color: $yellow;
-        font-size: 25px;
         font-weight: 700;
       }
       button {
@@ -106,7 +118,6 @@ body {
         background-color: $yellow;
         padding: 5px 15px;
         border-radius: 5px;
-        font-size: 20px;
         font-weight: 600;
         color: black;
       }
