@@ -31,15 +31,17 @@ ul, ol {
   list-style: none;
 }
 
-$dark: oklch(12.9% 0.042 264.695);
+$dark: oklch(20.8% 0.042 265.755);;
 $grey: oklch(27.9% 0.041 260.031);
+$grey-dark:oklch(27.8% 0.033 256.848);
 $grey-light: oklch(37.2% 0.044 257.287);
 $red-bright: oklch(57.7% 0.245 27.325);
 $lime: oklch(76.8% 0.233 130.85);
+$yellow: oklch(85.2% 0.199 91.936);
 body {
   background-color: $dark;
   font-family: "Open Sans", sans-serif;
-  
+  height: auto;
   .layout {
     max-width: 1500px;
     margin: 0 auto;
@@ -50,21 +52,84 @@ body {
     justify-content: space-between;
     padding: 10px 20px;
     background-color: $grey;
+
+    .nav-item {
+      padding: 10px 20px;
+      background-color: $grey-light;
+      border-radius: 3px;
+      font-size: 20px;
+      font-weight: 600;
+      
+    }
+    .nav-item:hover{
+      opacity: 50%;
+    }
+    .nav-logout {
+      background-color: $red-bright;
+    }
+    .nav-login {
+      background-color: $lime;
+    }
+  }
+  .flex-container {
+    display: flex;
+    // justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .przedmiot {
+    background-color: $grey-dark;
+    padding: 10px;
+    min-width: 276px;
+    border-radius: 5px;
     
+    &:hover {
+      transform: scale(95%)
+    }
+    img {
+      max-width: 150px;
+      margin: 20px auto;
+    }
+    .button-cost {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        color: $yellow;
+        font-size: 25px;
+        font-weight: 700;
+      }
+      button {
+        position: relative;
+        z-index: 2;
+        background-color: $yellow;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+      }
+      button:hover {
+        opacity: 50%;
+      }
+    }
   }
-  .nav-item {
-    padding: 10px 20px;
-    background-color: $grey-light;
-    border-radius: 3px;
-    
+  .flex-items-cart {
+    display: flex;
+    justify-content: space-between;
   }
-  .nav-item:hover{
-    opacity: 50%;
+  .cart {
+    background-color: $grey;
+    min-height: 200px;
   }
-  .nav-logout {
-    background-color: $red-bright;
+  .main {
+    h1 {
+      margin: 20px 0;
+    }
   }
-  .nav-login {
-    background-color: $lime;
+  .footer {
+    background-color: $grey;
+    padding: 10px 0;
   }
 }
