@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .2s ease;
+}
+html{color: white;}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+$dark: oklch(12.9% 0.042 264.695);
+$grey: oklch(27.9% 0.041 260.031);
+$grey-light: oklch(37.2% 0.044 257.287);
+$red-bright: oklch(57.7% 0.245 27.325);
+$lime: oklch(76.8% 0.233 130.85);
+body {
+  background-color: $dark;
+  font-family: "Open Sans", sans-serif;
+  
+  .layout {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: $grey;
+    
+  }
+  .nav-item {
+    padding: 10px 20px;
+    background-color: $grey-light;
+    border-radius: 3px;
+    
+  }
+  .nav-item:hover{
+    opacity: 50%;
+  }
+  .nav-logout {
+    background-color: $red-bright;
+  }
+  .nav-login {
+    background-color: $lime;
+  }
+}
