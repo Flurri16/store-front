@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Przedmiot() {
   return (
     <Link to={``} className='przedmiot'>
-      <img src="./img/mern.png" alt="" />
+      <img src="./img/cat.jpg" alt="" />
       <h2>Title</h2>
       <div className="button-cost">
         <span>36zł</span>
