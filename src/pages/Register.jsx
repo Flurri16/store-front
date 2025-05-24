@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Register() {
   return (
     <div className='form'>
-        <form>
+        <form onSubmit={e => e.preventDefault()}>
             <h1>Rejestracja:</h1>
             <div className="inputs-flex">
                 <input type="text" placeholder='Imię' />

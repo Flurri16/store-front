@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 *,
 *::before,
 *::after {
@@ -7,14 +8,25 @@
   box-sizing: border-box;
   transition: .2s ease;
 }
-html{color: white;}
-img, picture, video, canvas, svg {
+
+html {
+  color: white;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
   color: inherit;
   background: none;
@@ -27,34 +39,41 @@ a {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-$dark: oklch(20.8% 0.042 265.755);;
+$dark: oklch(20.8% 0.042 265.755);
+;
 $grey: oklch(27.9% 0.041 260.031);
-$grey-dark:oklch(27.8% 0.033 256.848);
+$grey-dark: oklch(27.8% 0.033 256.848);
 $grey-light: oklch(37.2% 0.044 257.287);
 $red-bright: oklch(57.7% 0.245 27.325);
 $lime: oklch(76.8% 0.233 130.85);
 $yellow: oklch(85.2% 0.199 91.936);
+
 body {
   background-color: $dark;
   font-family: "Open Sans", sans-serif;
   height: auto;
-.layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
-  .content {
-  flex: 1;
-  // background-color: aqua;
-  max-width: 1500px;
-  width: 100%;
-  margin: 0 auto;
+  .none {
+    display: none;
   }
-}
+  .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .content {
+      padding: 0 20px;
+      flex: 1;
+      // background-color: aqua;
+      max-width: 1500px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
 
   .nav {
     display: flex;
@@ -68,60 +87,96 @@ body {
       border-radius: 3px;
       font-size: 20px;
       font-weight: 600;
-      
+
     }
-    .nav-item:hover{
+
+    .nav-item:hover {
       opacity: 50%;
     }
+
     .nav-logout {
       background-color: $yellow;
+
       &:hover {
         background-color: $red-bright;
       }
     }
+
     .nav-login {
       background-color: $yellow;
+
       &:hover {
         background-color: $lime;
       }
     }
+
+    .cart-logout-flex {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      position: relative;
+
+      img {
+        width: 30px;
+        cursor: pointer;
+      }
+    }
+    .cart {
+      position: absolute;
+      z-index: 4;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background-color: $grey-light;
+      padding: 20px;
+      p {
+        font-size: 13px;
+      }
+    }
+
   }
+
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    // justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-bottom: 30px;
-    flex-wrap: wrap;
   }
+
   .przedmiot {
     background-color: $grey-dark;
     padding: 10px;
     min-width: 276px;
     border-radius: 5px;
-    
+
     &:hover {
       transform: scale(95%)
     }
+
     img {
       max-width: 150px;
       margin: 0 auto;
       margin-top: 20px;
       border-radius: 5px;
     }
+
     h2 {
       font-size: 16px;
       margin: 20px 0;
     }
+
     .button-cost {
       display: flex;
       align-items: center;
       justify-content: space-between;
       font-size: 16px;
+
       span {
         color: $yellow;
         font-weight: 700;
       }
+
       button {
         position: relative;
         z-index: 2;
@@ -131,63 +186,81 @@ body {
         font-weight: 600;
         color: black;
       }
+
       button:hover {
         opacity: 50%;
       }
     }
   }
+
   .main {
     h1 {
       margin: 20px 0;
     }
   }
+
   .footer {
     background-color: $grey;
     padding: 10px 0;
   }
+
   .form {
     background-color: $grey;
     margin: 0 auto;
     margin-top: 100px;
     padding: 20px;
     width: 500px;
+
     h1 {
       text-align: center;
       padding-bottom: 20px;
     }
+
     input {
       background-color: aliceblue;
       max-width: 100%;
       padding: 10px;
       border-radius: 5px;
       color: black;
+
       &:focus {
         background-color: $yellow;
       }
     }
+
     .inputs-flex {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
+
     .form-buttons-flex {
       display: flex;
       padding-top: 20px;
       justify-content: space-between;
       align-items: center;
+
       button {
         cursor: pointer;
         padding: 10px 20px;
         background-color: $yellow;
         font-weight: 600;
-        &:hover {opacity: 50%;}
+
+        &:hover {
+          opacity: 50%;
+        }
       }
+
       .form-buttons-flex-link {
         padding: 10px 20px;
         background-color: $grey-light;
         font-weight: 600;
-        &:hover {opacity: 50%;}
+
+        &:hover {
+          opacity: 50%;
+        }
       }
     }
   }
+
 }

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Login() {
   return (
     <div className='form'>
-    <form>
+    <form onSubmit={e => e.preventDefault()}>
         <h1>Logowanie:</h1>
         <div className="inputs-flex">
             <input type="text" placeholder='Email' />
