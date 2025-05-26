@@ -80,6 +80,7 @@ body {
     justify-content: space-between;
     padding: 10px 20px;
     background-color: $grey;
+    align-items: center;
 
     .nav-item {
       padding: 10px 20px;
@@ -96,6 +97,7 @@ body {
 
     .nav-logout {
       background-color: $yellow;
+      cursor: pointer;
 
       &:hover {
         background-color: $red-bright;
@@ -121,6 +123,11 @@ body {
         cursor: pointer;
       }
     }
+    .cart-count-flex {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
     .cart {
       position: absolute;
       z-index: 4;
@@ -129,9 +136,68 @@ body {
       width: 100%;
       height: auto;
       background-color: $grey-light;
-      padding: 20px;
-      p {
-        font-size: 13px;
+      padding: 10px;
+      .cart-items-flex-col {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .cart-totalcost {
+        display: flex;
+        justify-content: space-between;
+        h4, p {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        margin-bottom: 10px;
+      }
+      .cartitem {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 5px;
+        img {
+          width: 100%;
+        }
+        .buttons {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          padding-top: 10px;
+          align-items: center;
+          gap: 10px;
+          p {
+            font-size: 20px;
+          }
+          button {
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            &:hover {
+              opacity: 80%;
+            }
+          }
+          .add {
+            background-color: $lime;
+          }
+          .pull {
+            background-color: $red-bright;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            bottom: -15px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.658);
+          }
+        }
+        span {
+          padding-top: 10px;
+          font-size: 20px;
+        }
       }
     }
 
@@ -216,7 +282,7 @@ body {
       padding-bottom: 20px;
     }
 
-    input {
+    input, textarea {
       background-color: aliceblue;
       max-width: 100%;
       padding: 10px;
@@ -226,6 +292,9 @@ body {
       &:focus {
         background-color: $yellow;
       }
+    }
+    textarea {
+      height: 200px;
     }
 
     .inputs-flex {
