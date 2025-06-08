@@ -57,6 +57,7 @@ const authSlice = createSlice({
             state.token = null
             state.isOkej = false
             window.localStorage.removeItem('token')
+            window.localStorage.removeItem('cartItems')
             console.log(2, state)
         }
     }, extraReducers: (builder) => {

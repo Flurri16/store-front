@@ -21,13 +21,8 @@ export default function Register() {
     }
   }
 useEffect(() => {
-  if (message) {
-    toast(message)
-    // console.log(state)
-  }
-  if(isOkej) {
-    navigate('/')
-  }
+  if (message) toast(message)
+  if(isOkej) navigate('/')
 }, [message, isOkej])
   return (
     <div className='form'>
