@@ -1,5 +1,5 @@
 import axios from 'axios';
-const instance = axios.create({baseURL: 'http://localhost:5000/api'});
+const instance = axios.create({baseURL: 'store-back-production-d6cb.up.railway.app/api'});
 
 instance.interceptors.request.use((config) => {
     const token = window.localStorage.getItem('token')
