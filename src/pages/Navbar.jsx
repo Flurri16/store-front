@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Cart from './Cart'
 import { useDispatch, useSelector } from 'react-redux'
@@ -7,7 +7,7 @@ import { toast } from 'react-toastify'
 // import '../index.scss'
 export default function Navbar() {
   const dispatch = useDispatch()
-  const message = useSelector(state => state.auth.message)
+  // const message = useSelector(state => state.auth.message)
   const items = useSelector(state => state.cart.items) 
   const navigate = useNavigate()
   const email = useSelector(state => state.auth.email)

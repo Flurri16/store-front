@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 
 export default function CheckoutForm() {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   const navigate = useNavigate();
   const [name, setName] = useState('')
   const [sername, setSername] = useState('')
@@ -28,7 +28,7 @@ export default function CheckoutForm() {
       message += `<b>Country:</b> ${provincial}\n`
       message += `<b>Adress:</b> ${adress}\n`
       message += `<b>Items:</b>\n`
-      items.map((item, index) => {
+      items.forEach((item, index) => {
         message += `${index + 1}) ${item.title} --- ${item.cost} * ${item.quantity}\n`
       })
       // message += `<b>Total:</b> ${summ}zł\n`

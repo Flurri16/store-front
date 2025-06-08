@@ -48,7 +48,7 @@ export default function PrzedmiotStrona() {
             toast(message)
             navigate('/')
         }
-    }, [message])
+    }, [message, navigate])
     return (
         <div className='strona-flex'>
             <div className="strona-left">
