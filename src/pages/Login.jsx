@@ -20,7 +20,7 @@ export default function Login() {
   useEffect(() => {
     if(message) toast(message)
     if(isOkej) navigate("/")
-  }, [message, isOkej])
+  }, [message, isOkej, navigate])
   return (
     <div className='form'>
       <form onSubmit={e => e.preventDefault()}>

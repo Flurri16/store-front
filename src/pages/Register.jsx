@@ -9,7 +9,7 @@ export default function Register() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const message = useSelector(state => state.auth.message)
-  const state = useSelector(state => state.auth)
+  // const state = useSelector(state => state.auth)
   const isOkej = useSelector(state => state.auth.isOkej)
   const handlerSubmit = (e) => {
     try {
@@ -23,7 +23,7 @@ export default function Register() {
 useEffect(() => {
   if (message) toast(message)
   if(isOkej) navigate('/')
-}, [message, isOkej])
+}, [message, isOkej, navigate])
   return (
     <div className='form'>
       <form onSubmit={e => e.preventDefault()}>

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Przedmiot from './Przedmiot'
-import Cart from './Cart'
+
 import {useDispatch, useSelector} from 'react-redux'
 import { getAll } from '../redux/itemsSlice'
 export default function Sklep() {
