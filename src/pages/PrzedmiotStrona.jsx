@@ -9,6 +9,7 @@ export default function PrzedmiotStrona() {
     const [item, setItem] = useState(null)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
     const {message} = useSelector(state => state.items)
+    const email = useSelector(state => state.auth.email)
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const handlePrev = () => {
@@ -76,7 +77,9 @@ export default function PrzedmiotStrona() {
                         <div className="buttons-text">
                             <span>{item.cost}zł</span>
                             <div className="strona-buttons">
-                                <button className='delete' onClick={deleteHandler}>Usunąć</button>
+                                {
+                                    email && email === 'admin@gmail.com' ? <button className='delete' onClick={deleteHandler}>Usunąć</button> : null
+                                }
                                 <button onClick={addInCart}>Do kosza</button>
                             </div>
                         </div>
