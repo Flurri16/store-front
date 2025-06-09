@@ -1,6 +1,8 @@
 import  { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Cart from './Cart'
+import { FaShoppingCart } from 'react-icons/fa'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../redux/authSlice'
 import { toast } from 'react-toastify'
@@ -41,7 +43,7 @@ export default function Navbar() {
           isOkej ?
             <div className="cart-logout-flex">
               <div className="cart-count-flex">
-                <img src={`https://store-front-production-5db9.up.railway.app/img/cart.png`} alt="" onClick={cartActiveHandler} />
+                <FaShoppingCart size={24} color="white" onClick={cartActiveHandler} style={{ cursor: 'pointer' }} />
                 <span>({cartCount})</span>
               </div>
               <div className=""><h3>{email ? email : null}</h3></div>
