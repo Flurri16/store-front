@@ -41,7 +41,7 @@ export default function Navbar() {
           isOkej ?
             <div className="cart-logout-flex">
               <div className="cart-count-flex">
-                <img src="./img/cart.png" alt="" onClick={cartActiveHandler} />
+                <img src="/img/cart.png" alt="" onClick={cartActiveHandler} />
                 <span>({cartCount})</span>
               </div>
               <div className=""><h3>{email ? email : null}</h3></div>
