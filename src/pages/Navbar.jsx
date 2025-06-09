@@ -41,7 +41,7 @@ export default function Navbar() {
           isOkej ?
             <div className="cart-logout-flex">
               <div className="cart-count-flex">
-                <img src={`${process.env.PUBLIC_URL}/img/cart.png`} alt="" onClick={cartActiveHandler} />
+                <img src={`https://store-front-production-5db9.up.railway.app/img/cart.png`} alt="" onClick={cartActiveHandler} />
                 <span>({cartCount})</span>
               </div>
               <div className=""><h3>{email ? email : null}</h3></div>
