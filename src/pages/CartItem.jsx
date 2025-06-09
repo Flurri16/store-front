@@ -18,7 +18,7 @@ export default function CartItem({item}) {
   }
   return (
     <div className='cartitem'>
-        <img src={`http://localhost:5000${item.imagesPaths[0]}`} alt="" />
+        <img src={`https://store-back-production-d6cb.up.railway.app${item.imagesPaths[0]}`} alt="" />
         {/* <p>{item.cost}zł</p> */}
         <div className="cart-info">
           <div className="cart-title">

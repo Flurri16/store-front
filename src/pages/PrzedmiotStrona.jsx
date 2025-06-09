@@ -54,7 +54,7 @@ export default function PrzedmiotStrona() {
             <div className="strona-left">
                 {
                     item && item.imagesPaths ? (
-                        <img src={`http://localhost:5000${item.imagesPaths[currentImageIndex]}`} alt="" />
+                        <img src={`https://store-back-production-d6cb.up.railway.app${item.imagesPaths[currentImageIndex]}`} alt="" />
                     ) : null
                 }
                 {

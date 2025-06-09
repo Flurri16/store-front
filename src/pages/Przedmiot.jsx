@@ -23,7 +23,7 @@ export default function Przedmiot({item}) {
   }
   return (
     <div onClick={handler} className='przedmiot'>
-      <img src={`http://localhost:5000${item.imagesPaths[0]}`} alt="" />
+      <img src={`https://store-back-production-d6cb.up.railway.app${item.imagesPaths[0]}`} alt="" />
       <h2>{item.title}</h2>
       <div className="button-cost">
         <span>{item.cost}zł</span>
