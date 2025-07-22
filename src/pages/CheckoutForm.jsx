@@ -33,8 +33,8 @@ export default function CheckoutForm() {
       })
       // message += `<b>Total:</b> ${summ}zł\n`
 
-      const res = await axios.post('http://localhost:5000/api/telegram', { message })
-      const response = await axios.post('http://localhost:5000/api/create-checkout-session', { items })
+      const res = await axios.post('https://store-back-9j9m.onrender.com/api/telegram', { message })
+      const response = await axios.post('https://store-back-9j9m.onrender.com/api/create-checkout-session', { items })
       window.location.href = response.data.url  // перенаправляем на Stripe Checkout
       console.log(res.data)
     } catch (err) {
