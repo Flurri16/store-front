@@ -18,7 +18,7 @@ export default function CartItem({item}) {
   }
   return (
     <div className='cartitem'>
-        <img src={`http://localhost:5000${item.imagesPaths[0]}`} alt="" className='tt'/>
+        <img src={`https://store-back-9j9m.onrender.com${item.imagesPaths[0]}`} alt="" className='tt'/>
         {/* <p>{item.cost}zł</p> */}
         <div className="cart-info">
           <div className="cart-title">
