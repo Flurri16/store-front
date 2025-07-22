@@ -27,7 +27,7 @@ export default function Login() {
         <h1>Logowanie:</h1>
         <div className="inputs-flex">
           <input type="text" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
-          <input type="text" placeholder='Hasło' value={password} onChange={e => setPassword(e.target.value)} />
+          <input type="passsword" placeholder='Hasło' value={password} onChange={e => setPassword(e.target.value)} />
         </div>
         <div className="form-buttons-flex">
           <Link to="/register" className='form-buttons-flex-link'>Nie masz konta?</Link>

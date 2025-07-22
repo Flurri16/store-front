@@ -31,7 +31,7 @@ useEffect(() => {
         <div className="inputs-flex">
           {/* <input type="text" placeholder='Imię' /> */}
           <input type="text" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
-          <input type="text" placeholder='Hasło' value={password} onChange={e => setPassword(e.target.value)} />
+          <input type="password" placeholder='Hasło' value={password} onChange={e => setPassword(e.target.value)} />
         </div>
         <div className="form-buttons-flex">
           <Link to="/login" className='form-buttons-flex-link'>Już masz konto?</Link>
